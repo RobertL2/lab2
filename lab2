@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <math.h>
+//functie fara parametri si fara return
+void afiseaza_hello()
+{
+    printf("Hello\n");
+}
+
+// functie care primeste ca parametru un intreg si il afiseaza :
+void afiseaza_int(int x)
+{
+    printf("x=%d\n", x);
+}
+
+// funcite care primeste un para sun intreg si afiseaza suma lui cu 3:
+int calculeaza(int x)
+{
+  return x+3;  
+}
+
+//suma a doua numere:
+int suma(int a, int b)
+{
+    return a+b;
+}
+
+int suma2(int a, int b)
+{
+    int s;
+    s = a+b;
+    return s;
+}
+
+// f : R→R, f(x)= x2−7x+4
+float f(float x)
+{
+    return pow(x,2)-7*x+4;
+}
+
+int main()
+{
+    int a; // definire variabila
+    a=4; //val. constanta
+    //afisare mesaj:
+    printf("a=");
+    // citire de la tastatura:
+    //scanf("%d", &a);
+    // afisare valoare citita:
+    printf("a=%d\n", a);
+    
+    // apelare functie:
+    afiseaza_hello();
+    // apelare functie cu parametru:
+    afiseaza_int(21);
+    
+    //varianta1:
+    printf("calculeaza=%d\n", calculeaza(5));
+    //varianta2:
+    c=calculeaza(5);
+    printf("calculeza=%d\n", c);
+    
+    //suma a doua numere- valori constante:
+    printf("suma=%d\n", suma(3,4));
+    printf("suma2=%d\n", suma2(3,4));
+    //suma a doua numere- valori citie de la tastatura:
+    printf("a=");
+    printf("%d", &a);
+    printf("b=");
+    printf("b=%d\n", &b);
+    printf("suma=");
+    printf("suma=%d\n", &suma);
+    
+    
+    
+    return 0;
+}
